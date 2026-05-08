@@ -3,7 +3,7 @@ using GuitarWorld.Dtos;
 
 namespace GuitarWorld.Services.Interfaces;
 
-public class IUserService {
+public interface IUserService {
     Task<bool> AddUserAsync(UserDto dto);
     Task<bool> UserExistsAsync(UserDto dto);
     Task<UserDto?> GetUserAsync(int userId);

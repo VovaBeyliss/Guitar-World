@@ -1,5 +1,6 @@
 using GuitarWorld.Repositories.Services;
 using GuitarWorld.Services.Interfaces;
+using GuitarWorld.Extensions;
 using System.Threading.Tasks;
 using GuitarWorld.Models;
 using GuitarWorld.Dtos;
@@ -39,5 +40,5 @@ public class UserService : IUserService {
                                                                   user.Password == dto.Password);
     }
 
-    public async Task<UserDto?> GetUserAsync(int userId) => await _userRepository.GetUserByIdAsync(userId);
+    public async Task<UserDto?> GetUserAsync(int userId) => (await _userRepository.GetUserByIdAsync(userId))?.ToUserDto();
 }
