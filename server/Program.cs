@@ -6,10 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// di registration
-
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+
 
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAll", policy => {
