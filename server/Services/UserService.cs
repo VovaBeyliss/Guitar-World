@@ -15,7 +15,7 @@ public class UserService : IUserService {
     }
 
     public async Task<bool> AddUserAsync(UserDto dto) {
-        var userExists = await _userRepository.UserExists(user => user.Username == dto.Username && 
+        var userExists = await _userRepository.UserExistsAsync(user => user.Username == dto.Username && 
                                                                   user.Email == dto.Email && 
                                                                   user.Password == dto.Password);
 
@@ -34,8 +34,8 @@ public class UserService : IUserService {
         return false;
     }
 
-    public async Task<bool> UserExists(UserDto dto) {
-        return await _userRepository.UserExists(user => user.Username == dto.Username && 
+    public async Task<bool> UserExistsAsync(UserDto dto) {
+        return await _userRepository.UserExistsAsync(user => user.Username == dto.Username && 
                                                                   user.Email == dto.Email && 
                                                                   user.Password == dto.Password);
     }

@@ -4,5 +4,5 @@ using GuitarWorld.Data;
 namespace GuitarWorld.Extensions;
 
 public static class UserExtensions {
-    public static User ToUserDto(this UserDto dto) => new User(dto.UserName, dto.Email, dto.Password);
+    public static UserDto ToUserDto(this User user) => new User(user.UserName, user.Email, user.Password);
 }

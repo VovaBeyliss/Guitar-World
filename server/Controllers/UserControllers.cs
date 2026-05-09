@@ -1,5 +1,6 @@
 using GuitarWorld.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using GuitarWorld.Dtos;
 
 namespace GuitarWorld.Controllers;
@@ -44,7 +45,7 @@ public class UserController : ControllerBase {
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetUser([FromRoute] int userId) {
+    public async Task<IActionResult> GetUserData([FromRoute] int userId) {
         try {
             var user = await _userService.GetUserAsync(userId);
 

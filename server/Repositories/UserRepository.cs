@@ -12,16 +12,12 @@ public class UserRepository : IUserRepository {
         _db = db;
     }
 
-    public async Task<bool> UserExistsAsync(Expression<Func<User, bool>> predicate) {
-        return await _db.Users.AnyAsync(predicate);
-    }
+    public async Task<bool> UserExistsAsync(Expression<Func<User, bool>> predicate) => await _db.Users.AnyAsync(predicate);
 
     public async Task AddUserAsync(User user) {
         await _db.Users.AddAsync(user);
         await _db.SaveChangesAsync();
     }
 
-    public async Task<User?> GetUserByIdAsync(int userId) {
-        return await _db.Users.FindAsync(userId);
-    }
+    public async Task<User?> GetUserByIdAsync(int userId) => await _db.Users.FindAsync(userId);
 }

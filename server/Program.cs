@@ -1,6 +1,9 @@
+using GuitarWorld.Repositories.Interfaces;
 using GuitarWorld.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using GuitarWorld.Repositories;
 using GuitarWorld.Services;
+using GuitarWorld.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAll", policy => {
