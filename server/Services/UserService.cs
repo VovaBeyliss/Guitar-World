@@ -1,4 +1,4 @@
-using GuitarWorld.Repositories.Services;
+using GuitarWorld.Repositories.Interfaces;
 using GuitarWorld.Services.Interfaces;
 using GuitarWorld.Extensions;
 using System.Threading.Tasks;

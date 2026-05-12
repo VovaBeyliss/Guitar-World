@@ -132,3 +132,4 @@ D:\Programming\VebSites_Projects\WithBackend\C#.ASP.NET.EF.CORE\GuitarWorld\serv
 D:\Programming\VebSites_Projects\WithBackend\C#.ASP.NET.EF.CORE\GuitarWorld\server\obj\Debug\net8.0\server.pdb
 D:\Programming\VebSites_Projects\WithBackend\C#.ASP.NET.EF.CORE\GuitarWorld\server\obj\Debug\net8.0\server.genruntimeconfig.cache
 D:\Programming\VebSites_Projects\WithBackend\C#.ASP.NET.EF.CORE\GuitarWorld\server\obj\Debug\net8.0\ref\server.dll
+D:\Programming\VebSites_Projects\WithBackend\C#.ASP.NET.EF.CORE\GuitarWorld\server\obj\Debug\net8.0\server.sourcelink.json

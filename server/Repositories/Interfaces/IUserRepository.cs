@@ -7,5 +7,5 @@ namespace GuitarWorld.Repositories.Interfaces;
 public interface IUserRepository {
     Task<bool> UserExistsAsync(Expression<Func<User, bool>> predicate);
     Task AddUserAsync(User user);
-    Task<User?> GetUserById(int userId);
+    Task<User?> GetUserByIdAsync(int userId);
 }

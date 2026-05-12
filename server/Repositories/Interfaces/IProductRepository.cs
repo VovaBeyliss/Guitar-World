@@ -1,4 +1,6 @@
 using System.Linq.Expressions;
+using System.Threading.Tasks;
+using GuitarWorld.Models;
 
 namespace GuitarWorld.Repositories.Interfaces;
 

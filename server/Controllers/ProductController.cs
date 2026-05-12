@@ -13,12 +13,12 @@ public class ProductController : ControllerBase {
     }
 
     [HttpPost("{userId}")]
-    public async Task<IActionResult> AddpOrUpdateProduct([FromBody] ProductDto request, [FromRoute] int userId) {
-        await _productService.AddpOrUpdateProduct(request, userId);
+    public async Task<IActionResult> AddpOrUpdateProduct([FromBody] AddProductDto request, [FromRoute] int userId) {
+        await _productService.AddOrUpdateProductAsync(request, userId);
 
         return Ok(new { success = true });
     }
 
     [HttpGet("{userId}")]
-    public async Task<IActionResult> GetAllUserProducts([FromRoute] int userId) => Ok(new { success = true, products = await _productService.GetAllUserProductsAsync(userId) });
+    public async Task<IActionResult> GetUserProducts([FromRoute] int userId) => Ok(new { success = true, products = await _productService.GetUserProductsAsync(userId) });
 }

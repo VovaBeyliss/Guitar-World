@@ -1,5 +1,8 @@
+using GuitarWorld.Models;
+using GuitarWorld.Dtos;
+
 namespace GuitarWorld.Extensions;
 
 public static class ProductExtensions {
-    public static ProductDto ToProductDto(this Product product) => new ProductDto(product.Price, product.Name, product.Type, product.Brand);
+    public static GetProductDto ToProductDto(this Product source) => new GetProductDto(source.Price, source.Quantity, source.Name, source.Type, source.Brand);
 }

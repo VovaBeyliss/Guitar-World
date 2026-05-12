@@ -1,16 +1,16 @@
-using GuitarWorld.Repositories.Services;
+using GuitarWorld.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using GuitarWorld.Models;
+using GuitarWorld.Data;
 
 namespace GuitarWorld.Repositories;
 
 public class ProductRepository : IProductRepository {
     private readonly AppDbContext _db;   
 
-    public UserService(AppDbContext db) {
-        _db = db;
-    }
+    public ProductRepository(AppDbContext db) => _db = db;
 
     public async Task<Product?> GetProductByUserIdAndDetails(Expression<Func<Product, bool>> predicate) => await _db.Products.FirstOrDefaultAsync(predicate);
 
